@@ -1,1 +1,0 @@
-from .views_cbv_generics import CompanyListAPIView, CompanyDetailAPIView, VacancyListAPIView, VacancyDetailAPIView, CompanyVacanciesAPIView
