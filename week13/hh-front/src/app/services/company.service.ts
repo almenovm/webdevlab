@@ -27,7 +27,7 @@ export class CompanyService {
     return this.http.post<LoginResponse>(`${this.BASE_URL}/main/login/`, {
       username,
       password
-    })
+    });
   }
 
 }

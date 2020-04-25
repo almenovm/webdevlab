@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {CompanyService} from './services/company.service';
 
 @Component({
@@ -17,14 +17,15 @@ export class AppComponent {
 
   constructor(private companyService: CompanyService) {}
 
+  // tslint:disable-next-line:use-lifecycle-interface
   ngOnInit() {
-    let token = localStorage.getItem('token');
+    const token = localStorage.getItem('token');
     if (token) {
       this.logged = true;
     }
   }
 
-  login(){
+  login() {
     this.companyService.login(this.username, this.password)
       .subscribe(res => {
 
